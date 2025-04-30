@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="container lg:grid lg:grid-cols-2 py-14">
                 <div className="grid gap-4 pb-4 text-left lg:pb-0 lg:grid-cols-2">
                     <div>
-                        <h2 className="pb-4 text-xl font-semibold">Address</h2>
+                        <h2 className="pb-4 text-xl font-semibold">ADDRESS</h2>
                         <div className="flex flex-col ">
                             <h1>Giriraj Interiors,</h1>
                             <h1>In Front of Nanakheda Police Station,</h1>

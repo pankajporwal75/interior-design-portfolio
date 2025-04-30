@@ -5,7 +5,7 @@ export default function HeroSection() {
 
     return (
 
-        <div className="bg-zinc-50">
+        <div className="bg-zinc-50 py-8">
             <div className="container py-8 text-center lg:py-0 lg:text-left lg:flex lg:justify-between ">
                 <div className="lg:w-1/2 xl:py-14 lg:py-8">
                     <p className="tracking-widest">WELCOME TO</p>
