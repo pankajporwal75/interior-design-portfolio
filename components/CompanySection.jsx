@@ -9,7 +9,7 @@ export default function CompanySection() {
         pauseOnHover={true}
         className="text-gray-800 text-5xl font-normal uppercase tracking-widest"
       >
-        Interior Designing &nbsp;|&nbsp; Elevation Planning &nbsp;|&nbsp; 2D Floor Plan &nbsp;&nbsp;&nbsp;
+        Interior Designing &nbsp;|&nbsp; Elevation Planning &nbsp;|&nbsp; 2D Floor Plan &nbsp;|&nbsp;&nbsp;
       </Marquee>
     </div>
   );

@@ -6,45 +6,69 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            name: 'Drowing room for family time ',
-            description: 'Badroom with a clean and comfortable design for your family. charming whit a modern design. ',
+            location: 'Vinayak City, Ujjain',
+            client: 'Mr Harshdeep Bhatia',
             image: '/image/project3.jpg',
             link: '',
         },
         {
             id: 2,
-            name: 'Kitchen look modern and clean',
-            description: 'kitchen look modern and clean. charming whit a modern design. ',
+            location: 'Shipra Vihar, Ujjain',
+            client: 'Mr. Shailendra Sharma',
             image: '/image/project2.jpg',
             link: '',
         },
         {
             id: 3,
-            name: 'Perfect living room for family time',
+            location: 'Alakhdham Nagar, Ujjain',
+            client: 'Mr Shivam Jain',
             description: 'Drowing room with a clean and comfortable design for your family. charming whit a modern design. ',
             image: '/image/project4.png',
         },
     ];
     return (
         <div className="">
-            <div className="bg-[url('/image/backgroundproject.jpg')] bg-center bg-cover ">
-                <h1 className="container py-64 text-6xl font-semibold tracking-widest text-white ">OUR PROJECTS</h1>
+            <div className="bg-[url('/image/backgroundproject.jpg')] bg-center bg-cover max-h-80 ">
+                <h1 className="container py-36 text-6xl font-semibold tracking-widest text-white ">OUR PROJECTS</h1>
             </div>
-            <div className="container grid grid-cols-2 gap-8 py-8">
+            <div className="container py-12">
 
-                {projects.map((project) => (
-                    <div key={project.id} className="relative overflow-hidden rounded-xl group">
-                        <div>
-                            <Image src={project.image} width={480} height={380} alt="" className="w-full" />
-                        </div>
-                        <div className="absolute bottom-0 flex-col items-center justify-end w-full gap-32 p-12 text-xl text-white transition duration-300 ease-in-out translate-y-full bg-gradient-to-b from-transparent to-black group-hover:translate-y-0">
-                            <h1 className="text-2xl font-semibold">{project.name}</h1>
-                            <p className="py-4 ">{project.description}</p>
+            {projects.map((project, index) => (
+                <div
+                    key={project.id}
+                    className={`relative flex w-full overflow-hidden rounded-xl group h-96 mb-10 ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                    }`}
+                >
+                    {/* Image Section (60%) */}
+                    <div className="w-3/5 h-full">
+                    <Image
+                        src={project.image}
+                        width={960}
+                        height={380}
+                        alt={project.location}
+                        className="object-cover w-full h-full rounded-xl"
+                    />
+                    </div>
+
+                    {/* Info Section (40%) */}
+                    <div className="relative w-2/5 h-full">
+                        <div className="absolute inset-0 flex items-center justify-center p-12 text-black h-full">
+                            <div className={`flex gap-4 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                                <div className="w-1 bg-black self-stretch" />
+                                
+                                {/* Text content */}
+                                <div>
+                                    <h1 className="text-3xl font-medium">{project.location}</h1>
+                                    <h2 className="py-2 text-2xl font-light">Client: {project.client}</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                </div>
+            ))}
 
-                ))}
             </div>
         </div>
     )
